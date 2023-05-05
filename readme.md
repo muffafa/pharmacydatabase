@@ -6,13 +6,51 @@ several doctors. Every patient has a family doctor, and every doctor has at leas
 
 Database schema:
 
-> **DOCTORS** (DoctorSSN, Name, Specialty, YearsOfExperience)
->
-> **DRUGS** (BarCode, Name, Formula)
->
-> **PATIENTS** (PatientSSN, Name, Age, Address, City, FamilyDoctorSSN)
->
-> **PRESCRIPTION** (PatientSSN, DoctorSSN, Date, BarCode, UsageDescription)
+> DOCTORS (***DoctorSSN***, Name, Specialty, YearsOfExperience)
+
+``` sql
+ CREATE TABLE DOCTORS(
+ DoctorSSN VARCHAR(11) PRIMARY KEY,
+ Name VARCHAR(50) NOT NULL,
+ Specialty VARCHAR(50) NOT NULL,
+ YearsOfExperience INT NOT NULL
+);
+```
+
+> DRUGS (***BarCode***, Name, Formula)
+
+```sql
+ CREATE TABLE DRUGS(
+ BarCode VARCHAR(50) PRIMARY KEY,
+ Name VARCHAR(50) NOT NULL,
+ Formula VARCHAR(50)
+ );
+```
+
+> PATIENTS (***PatientSSN***, Name, Age, Address, City, FamilyDoctorSSN)
+
+```sql
+CREATE TABLE PATIENTS(
+ PatientSSN VARCHAR(11) PRIMARY KEY,
+ Name VARCHAR(50) NOT NULL,
+ Age INT NOT NULL,
+ Address VARCHAR(50) NOT NULL,
+ City VARCHAR(50) NOT NULL,
+ FamilyDoctorSSN VARCHAR(11) REFERENCES DOCTORS(DoctorSSN)
+);
+```
+
+> PRESCRIPTION (***PatientSSN, DoctorSSN, Date, BarCode,*** UsageDescription)
+
+```sql
+CREATE TABLE PRESCRIPTION(
+ PatientSSN VARCHAR(11) ,
+ DoctorSSN VARCHAR(11) ,
+ Date DATE,
+ BarCode VARCHAR(50),
+ UsageDescription VARCHAR(100),
+);
+```
 
 ## Consider the database schema given above, write the following queries in relational algebra
 
