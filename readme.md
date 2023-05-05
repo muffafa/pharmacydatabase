@@ -56,24 +56,38 @@ CREATE TABLE PRESCRIPTION(
 
 - Find the SSN, name, and address of patients whose family doctor’s years of experience
 is less than 5 years.
+  - Answer:
+
 - Find the SSN, name, and age of patients who have obtained prescriptions from all
 doctors.
+  - Answer:
+
 - Find the SSN and name of the patients who live in Adana and have prescribed drug
 with formula equal to aspirin by their family doctors.
+  - Answer:
+
 - Find the SSN, name and specialty of the doctors who are assigned as family doctors
 and have prescribed drug with formula aspirin but not prescribed drug with formula
 antibiotics.
+  - Answer:
+
 - Find the barcode and name of the drugs which have not been prescribed by any doctor.
+  - Answer:
 
 ## Consider the database schema given above, write the below queries in standard SQL
 
 - Find the SSN and name of doctors who have prescribed all drugs.
+  - Answer:
 - Find the SSN and name of patients who have obtained highest number of prescriptions
 (you should count number of occurrences of each patient in the prescription table and
 find the patient who have appeared max times in the prescription table).
+  - Answer:
 - Find the SSN, name and address of the patients who have obtained prescriptions from
 any doctor but not obtained any prescription from their family doctor.
+  - Answer:
 - Find the barcode and name of drugs which have been prescribed more than 100 times
 to patients live in Adana.
+  - Answer:
 - Find the barcode and name of drugs which have prescribed by doctors who are not
 family doctor.
+  - Answer:
