@@ -3,11 +3,16 @@
 Consider the following relations where doctors prescribe drugs for patients. A doctor could
 prescribe one or more drugs for several patients, and a patient could obtain prescriptions from
 several doctors. Every patient has a family doctor, and every doctor has at least one patient.
-Solve question 1 and 2 according to the below database schema.
-DOCTORS (DoctorSSN, Name, Specialty, YearsOfExperience)
-DRUGS (BarCode, Name, Formula)
-PATIENTS (PatientSSN, Name, Age, Address, City, FamilyDoctorSSN)
-PRESCRIPTION (PatientSSN, DoctorSSN, Date, BarCode, UsageDescription)
+
+Database schema:
+
+> **DOCTORS** (DoctorSSN, Name, Specialty, YearsOfExperience)
+>
+> **DRUGS** (BarCode, Name, Formula)
+>
+> **PATIENTS** (PatientSSN, Name, Age, Address, City, FamilyDoctorSSN)
+>
+> **PRESCRIPTION** (PatientSSN, DoctorSSN, Date, BarCode, UsageDescription)
 
 ## Consider the database schema given above, write the following queries in relational algebra
 
